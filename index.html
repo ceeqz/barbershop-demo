@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Барбершоп №1 — мужские стрижки, запись онлайн</title>
+<meta name="description" content="Барбершоп №1: мужские стрижки, борода, бритьё. Цены, мастера, онлайн-запись.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Oswald:wght@500;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<header class="nav" id="nav">
+  <a class="logo" href="#top">Барбершоп <b>№1</b></a>
+  <nav class="links" aria-label="Основное меню">
+    <a href="#services">Цены</a><a href="#masters">Мастера</a><a href="#work">Работы</a><a href="#contacts">Контакты</a>
+  </nav>
+  <a class="phone" href="tel:+79000000000">+7 900 000-00-00</a>
+  <a class="btn btn-sm" href="#booking">Записаться</a>
+  <button class="burger" id="burger" aria-label="Меню" aria-expanded="false" aria-controls="mobileMenu"><span></span><span></span></button>
+</header>
+<nav class="mobile-menu" id="mobileMenu" aria-label="Мобильное меню">
+  <a href="#services">Цены</a><a href="#masters">Мастера</a><a href="#work">Работы</a><a href="#contacts">Контакты</a>
+  <a href="tel:+79000000000">+7 900 000-00-00</a>
+  <a class="mm-cta" href="#booking">Записаться</a>
+</nav>
+
+<main>
+<section class="hero" id="top">
+  <div class="hero-text">
+    <h1>Мужские стрижки<br>и борода</h1>
+    <p>Работаем без выходных, с 10 до 21. Запись онлайн или по телефону, приходить можно и без записи, если есть свободное окно.</p>
+    <div class="hero-cta"><a class="btn" href="#booking">Записаться</a><a class="btn btn-line" href="#services">Цены</a></div>
+    <ul class="facts">
+      <li><b>ул. Примерная, 12</b>вход со двора</li>
+      <li><b>10:00 — 21:00</b>каждый день</li>
+    </ul>
+  </div>
+  <div class="hero-photo"><img src="" data-src="hero" alt="Рабочие места в барбершопе"></div>
+</section>
+
+<section class="section" id="services">
+  <div class="wrap">
+    <h2>Цены</h2>
+    <ul class="price-list" id="priceList"></ul>
+    <p class="note">Длинные волосы и сложные работы мастер оценит перед стрижкой.</p>
+  </div>
+</section>
+
+<section class="section tint" id="masters">
+  <div class="wrap">
+    <h2>Мастера</h2>
+    <div class="masters" id="mastersGrid"></div>
+  </div>
+</section>
+
+<section class="section" id="work">
+  <div class="wrap">
+    <h2>Работы</h2>
+    <div class="gallery" id="gallery"></div>
+  </div>
+</section>
+
+<section class="section tint" id="booking">
+  <div class="wrap booking">
+    <div class="booking-text">
+      <h2>Запись</h2>
+      <p>Выберите услугу, мастера и время. После заявки мы перезвоним и подтвердим запись.</p>
+      <p class="demo">Сайт демонстрационный: заявка никуда не отправляется.</p>
+    </div>
+
+    <form class="form" id="bookingForm" novalidate>
+      <div class="field"><label for="fService">Услуга</label><select id="fService" required></select></div>
+      <div class="field"><label for="fMaster">Мастер</label><select id="fMaster"></select></div>
+      <div class="field wide"><label for="fDate">Дата</label><input type="date" id="fDate" required></div>
+      <div class="field wide"><span class="lbl" id="slotsLbl">Время</span><div class="slots" id="slots" role="radiogroup" aria-labelledby="slotsLbl"></div><p class="err" id="errTime" role="alert"></p></div>
+      <div class="field"><label for="fName">Имя</label><input type="text" id="fName" autocomplete="name" required><p class="err" id="errName" role="alert"></p></div>
+      <div class="field"><label for="fPhone">Телефон</label><input type="tel" id="fPhone" autocomplete="tel" placeholder="+7 900 000-00-00" required><p class="err" id="errPhone" role="alert"></p></div>
+      <div class="summary wide" id="summary" aria-live="polite"></div>
+      <button class="btn wide" type="submit">Отправить заявку</button>
+    </form>
+
+    <div class="done" id="done" hidden>
+      <h3>Заявка принята</h3>
+      <p id="doneText"></p>
+      <p class="demo">Демо: запись не сохранена и никуда не отправлена.</p>
+      <button class="btn btn-line" id="again" type="button">Новая запись</button>
+    </div>
+  </div>
+</section>
+
+<section class="section" id="reviews">
+  <div class="wrap">
+    <h2>Отзывы</h2>
+    <div class="reviews">
+      <figure><blockquote>Хожу третий год. Стрижка держит форму месяц, ждать почти не приходится.</blockquote><figcaption>Дмитрий</figcaption></figure>
+      <figure><blockquote>Делал бритьё опасной бритвой в первый раз. Аккуратно, без раздражения кожи.</blockquote><figcaption>Сергей</figcaption></figure>
+      <figure><blockquote>Подстригли сына, он не капризничал. Спасибо мастеру.</blockquote><figcaption>Андрей</figcaption></figure>
+    </div>
+    <p class="note">Отзывы вымышленные: сайт создан как демонстрационный проект.</p>
+  </div>
+</section>
+
+<section class="section tint" id="contacts">
+  <div class="wrap contacts">
+    <h2>Контакты</h2>
+    <dl>
+      <div><dt>Адрес</dt><dd>ул. Примерная, 12<br><span>вымышленный адрес</span></dd></div>
+      <div><dt>Часы работы</dt><dd>Ежедневно, 10:00 — 21:00</dd></div>
+      <div><dt>Телефон</dt><dd><a href="tel:+79000000000">+7 900 000-00-00</a><br><span>вымышленный номер</span></dd></div>
+    </dl>
+  </div>
+</section>
+</main>
+
+<footer>
+  <div class="wrap foot">
+    <span>© 2026 Барбершоп №1. Вымышленный барбершоп, демонстрационный проект.</span>
+    <span>Сайт: <a class="credit" href="mailto:ceeqzqwe@gmail.com">ceeqz</a></span>
+  </div>
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>
